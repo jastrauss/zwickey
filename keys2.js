@@ -55,7 +55,7 @@ function keyHandler( e )
 	if (e.keyCode) code = e.keyCode;
 	else if (e.which) code = e.which;
 	
-	var select = code-36;
+	var select = code-36;	
 	if ( select==1 || select==3 ) {
 		if ( select==3 ) select=2;
 		var self = $(".level");
