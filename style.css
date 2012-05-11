@@ -112,3 +112,7 @@ div.arrow2 {
 
 .box_red { border: solid 3px #ff33cc; }
 .box_black { border: solid 2px black; }
+
+.prompt {
+    margin: auto;
+}

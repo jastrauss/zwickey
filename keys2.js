@@ -3,6 +3,10 @@ $(document).keydown( keyHandler );
 
 var colors = ["red","green"];
 var counter = 0;
+var step = 0;
+var password_mode = false;
+var name = "";
+var password = "";
 	
 
 function initialize() {
@@ -14,6 +18,8 @@ function initialize() {
 	
 	verticalArrows();
 	reset();
+	
+	showStep();
 }
 
 function reset() {
@@ -57,7 +63,10 @@ function keyHandler( e )
 	else if (e.which) code = e.which;
 	
 	var select = code-36;	
-	if ( select==1 || select==3 ) {
+	if(code == 13) {
+		showStep();
+	}
+	else if ( select==1 || select==3 ) {
 		if ( select==3 ) select=2;
 		var self = $(".level");
 		$(".level > div:nth-child("+(select)+")").addClass("level");
@@ -68,6 +77,10 @@ function keyHandler( e )
 			var txt = $(".level").text();
 			if ( txt=='<-' )
 				$("#text").html($("#text").html().substring(0,$("#text").html().length-1));
+			else if ( passwordmode == true ){
+				password = password + txt;
+				$("#text").html($("#text").html()+"*");
+			}
 			else if ( txt=='space' )
 				$("#text").html($("#text").html()+" ");
 			else
@@ -108,4 +121,34 @@ function keyHandler( e )
 			undo.removeClass("level");
 		}
 	}
+}
+
+function showStep() {
+	step++;
+    var prompt = document.getElementById("prompt"); 
+    var ac = document.getElementById("autocomplete");
+    if (step == 1) {
+        prompt.innerHTML = "[Step 1/3] Enter your username:";
+        ac.style.visibility = "hidden";
+        passwordmode = false;
+    } else if (step == 2) {
+    	name = $('#text').text();
+    	name = name.slice(8);
+    	prompt.innerHTML = "[Step 2/3] (User: " + name + ") Enter your password:";
+    	ac.style.visibility = "hidden";
+        passwordmode = true;
+        $('#text').text('>>');
+    } else if (step == 3) {
+        prompt.innerHTML = "[Step 3/3] Enter a movie:";
+        ac.style.visibility = "visible";
+        passwordmode = false;
+        $('#text').text('>>');
+    } else {
+        prompt.innerHTML = "Thanks! Now you are watching: " + fullword.join('');
+        ac.style.visibility = "hidden";
+        $('#controls').hide();
+        $('.textbox').hide();
+        $('.letter').hide();
+        $('.tips').hide();
+    }
 }
