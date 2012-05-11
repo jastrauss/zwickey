@@ -2,6 +2,7 @@ $(document).ready( initialize );
 $(document).keydown( keyHandler );
 
 var colors = ["red","green"];
+var counter = 0;
 	
 
 function initialize() {
@@ -67,7 +68,7 @@ function keyHandler( e )
 			var txt = $(".level").text();
 			if ( txt=='<-' )
 				$("#text").html($("#text").html().substring(0,$("#text").html().length-1));
-			else if ( txt=='_' )
+			else if ( txt=='space' )
 				$("#text").html($("#text").html()+" ");
 			else
 				$("#text").html($("#text").html()+txt);
@@ -79,6 +80,18 @@ function keyHandler( e )
 		}
 	}
 	else if ( select==4 || select==2 ) {
+		e.preventDefault();
+		if(select==4)
+		{
+			counter = (counter+1)%3;
+		}
+		else if(select==2)
+		{
+			if(counter == 0)
+				counter = 2;
+			else
+				counter = (counter-1)%3;
+		}
 		var undo = $(".level");
 		var parent = undo.parent();
 		if ( !undo.hasClass("outer") )
@@ -89,7 +102,9 @@ function keyHandler( e )
 		}
 		else
 		{
-			$(".outer").addClass("level");
+			//$(".outer").addClass("level");
+			var id = "#"+counter;
+			$(id).addClass("level");
 			undo.removeClass("level");
 		}
 	}
