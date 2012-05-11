@@ -76,7 +76,7 @@ function keyHandler( e )
 		if ( $(".level").children().length==0 )
 		{
 			var txt = $(".level").text();
-			if ( txt=='<-' )
+			if ( txt=='del' )
 				$("#text").html($("#text").html().substring(0,$("#text").html().length-1));
 			else if ( passwordmode == true ){
 				password = password + txt;
@@ -86,7 +86,15 @@ function keyHandler( e )
 				$("#text").html($("#text").html()+" ");
 			else
 				$("#text").html($("#text").html()+txt);
-			reset();
+		
+    	reset();
+
+      // autcomplete shenanigans
+      if (step == 3) {
+        moviename = $('#text').text().slice(2);
+        populateAutocomplete(moviename);
+      }
+      
 		}
 		else
 		{
