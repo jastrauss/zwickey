@@ -84,3 +84,31 @@ div.arrow2 {
 	position: relative;
 	display: inline-block;
 }
+
+
+#autocomplete {
+  width: 250px;
+  height: 350px;
+  display: inline-block;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.results {
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
+}
+
+.results_black { border: 1px solid black; }
+.results_red { 
+  border: 2px solid #ff33cc; 
+  background-color: #bbbbbb;
+}
+
+.tips{
+  text-align: center;
+}
+
+.box_red { border: solid 3px #ff33cc; }
+.box_black { border: solid 2px black; }
