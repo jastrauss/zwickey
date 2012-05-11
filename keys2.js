@@ -6,6 +6,7 @@ var counter = 0;
 var step = 0;
 var password_mode = false;
 var name = "";
+var moviename = "";
 var password = "";
 	
 
@@ -144,11 +145,9 @@ function showStep() {
         passwordmode = false;
         $('#text').text('>>');
     } else {
-        prompt.innerHTML = "Thanks! Now you are watching: " + fullword.join('');
-        ac.style.visibility = "hidden";
-        $('#controls').hide();
-        $('.textbox').hide();
-        $('.letter').hide();
-        $('.tips').hide();
+        moviename = $('#text').text().slice(2);
+        alert(moviename);
+        // get the video url and redirect there!
+
     }
 }
