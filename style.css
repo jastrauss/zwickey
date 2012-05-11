@@ -26,6 +26,10 @@ div.outer {
 	position: relative;
 }
 
+div.ital{
+  font-style: italic;
+}
+
 div.letter {
 	/*width:24px;*/
 	font-size: 40px;
