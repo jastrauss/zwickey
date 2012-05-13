@@ -3,7 +3,7 @@ $(document).keydown( keyHandler );
 
 var colors = ["red","green"];
 var counter = 0;
-var step = 2;
+var step = 0;
 var password_mode = false;
 var name = "";
 var moviename = "";
@@ -67,7 +67,7 @@ function keyHandler( e )
 	if(code == 13) {
 		showStep();
 	}
-	else if ( select==1 || select==3 ) {
+	else if ( (select==1 || select==3) && counter < 3 ) {
 		if ( select==3 ) select=2;
 		var self = $(".level");
 		$(".level > div:nth-child("+(select)+")").addClass("level");
@@ -106,7 +106,7 @@ function keyHandler( e )
 		
 		var undo = $(".level");
 		var parent = undo.parent();
-		if ( !undo.hasClass("outer") )
+		if ( !undo.hasClass("outer") && counter < 3)
 		{
 			parent.addClass("level");
 			undo.removeClass("level");
@@ -121,7 +121,7 @@ function keyHandler( e )
 			else if(select==2) // up arrow
 			{
 				if(counter == 0)
-					counter = 2;
+					counter = slots+2;
 				else
 					counter = (counter-1)%(slots+3); // num divs
 			}

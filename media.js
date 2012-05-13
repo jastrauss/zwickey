@@ -23,7 +23,7 @@ var parseXML = function(data) {
 }
 
 var queryYoutube = function(word) {
-  $.get("https://gdata.youtube.com/feeds/api/videos", {'q':word, 'max-results':"8"}, 
+  $.get("https://gdata.youtube.com/feeds/api/videos", {'q':word, 'max-results':"5"}, 
     function(data) { parseXML(data); }
   );
 }
@@ -33,9 +33,9 @@ var makeACDiv = function() {
   $('#autocomplete').html('');
   for (var i=0; i<vids.length; i++) {
     var did = i+3;
-    $('#autocomplete').append('<div id="'+did+'"><div class="results results_black" >'+vids[i][0]+'</div></div>');
+    $('#autocomplete').append('<div id="'+did+'"><div class="results blue" >'+vids[i][0]+'</div></div>');
   }  
-  slots = 2 + vids.length;
+  slots = vids.length;
 };
 
 populateAutocomplete = function(word) {
