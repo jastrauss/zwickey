@@ -33,7 +33,7 @@ var makeACDiv = function() {
   $('#autocomplete').html('');
   for (var i=0; i<vids.length; i++) {
     var did = i+3;
-    $('#autocomplete').append('<div class="results results_black" id="'+did+'">'+vids[i][0]+'</div>');
+    $('#autocomplete').append('<div id="'+did+'"><div class="results results_black" >'+vids[i][0]+'</div></div>');
   }  
   slots = 2 + vids.length;
 };
