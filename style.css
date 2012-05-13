@@ -78,6 +78,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56b6e2', end
 	text-align: center;
 }
 
+.level > .results {
+  border: 2px solid red;
+}
+
+.arrrow, .arrrow2 {
+  display: none;
+}
+
 div.arrow {
 	display: block;
 	position: absolute;
@@ -91,7 +99,7 @@ div.arrow2 {
 
 
 #autocomplete {
-  width: 250px;
+  width: 650px;
   height: 350px;
   display: inline-block;
   margin-top: 50px;
@@ -102,9 +110,11 @@ div.arrow2 {
   text-align: center;
   padding: 3px;
   margin: 3px;
+  font-size: 24px;
 }
 
 .results_black { border: 1px solid black; }
+
 .results_red { 
   border: 2px solid #ff33cc; 
   background-color: #bbbbbb;

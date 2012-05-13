@@ -3,7 +3,7 @@ $(document).keydown( keyHandler );
 
 var colors = ["red","green"];
 var counter = 0;
-var step = 0;
+var step = 2;
 var password_mode = false;
 var name = "";
 var moviename = "";
@@ -114,16 +114,16 @@ function keyHandler( e )
 		}
 		else
 		{
-			if(select==4)
+			if(select==4) // down arrow
 			{
-				counter = (counter+1)%3;
+				counter = (counter+1)%(slots+3); // num divs
 			}
-			else if(select==2)
+			else if(select==2) // up arrow
 			{
 				if(counter == 0)
 					counter = 2;
 				else
-					counter = (counter-1)%3;
+					counter = (counter-1)%(slots+3); // num divs
 			}
 			//$(".outer").addClass("level");
 			var id = "#"+counter;

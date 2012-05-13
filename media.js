@@ -1,5 +1,6 @@
 var vids = [];
 var populateAutocomplete;
+var slots=0;
 
 $(function() {
 
@@ -31,8 +32,10 @@ var makeACDiv = function() {
   // take vids and make divs and put in ac box
   $('#autocomplete').html('');
   for (var i=0; i<vids.length; i++) {
-    $('#autocomplete').append('<div class="results results_black">'+vids[i][0]+'</div>');
+    var did = i+3;
+    $('#autocomplete').append('<div class="results results_black" id="'+did+'">'+vids[i][0]+'</div>');
   }  
+  slots = 2 + vids.length;
 };
 
 populateAutocomplete = function(word) {
