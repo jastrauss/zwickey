@@ -103,17 +103,7 @@ function keyHandler( e )
 	}
 	else if ( select==4 || select==2 ) {
 		e.preventDefault();
-		if(select==4)
-		{
-			counter = (counter+1)%3;
-		}
-		else if(select==2)
-		{
-			if(counter == 0)
-				counter = 2;
-			else
-				counter = (counter-1)%3;
-		}
+		
 		var undo = $(".level");
 		var parent = undo.parent();
 		if ( !undo.hasClass("outer") )
@@ -124,6 +114,17 @@ function keyHandler( e )
 		}
 		else
 		{
+			if(select==4)
+			{
+				counter = (counter+1)%3;
+			}
+			else if(select==2)
+			{
+				if(counter == 0)
+					counter = 2;
+				else
+					counter = (counter-1)%3;
+			}
 			//$(".outer").addClass("level");
 			var id = "#"+counter;
 			$(id).addClass("level");
