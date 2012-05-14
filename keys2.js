@@ -158,7 +158,6 @@ function showStep() {
           location.href = 'http://www.youtube.com/results?search_query=hi'+moviename
         } else { // get the result from autocomplete
           var movie_num = counter-3;
-          console.log(movie_num);
           var url = vids[movie_num][1];
           url = url.replace('watch?v=','v/') // play the youtube video fullscreen
           location.href=url;
