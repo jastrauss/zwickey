@@ -5,7 +5,7 @@ body {
 
 div.container {
 	text-align: center;
-	/* margin-top: 100px; */
+	margin-top: 30px;
 }
 
 div.outer {
@@ -95,7 +95,7 @@ div.arrow2 {
 
 #autocomplete {
   width: 650px;
-  height: 350px;
+  min-height: 220px;
   display: inline-block;
   margin-top: 25px;
   text-align: center;

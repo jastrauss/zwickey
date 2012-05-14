@@ -163,7 +163,7 @@ function showStep() {
         } else { // get the result from autocomplete
           var movie_num = counter-3;
           var url = vids[movie_num][1];
-          url = url.replace('watch?v=','v/') // play the youtube video fullscreen
+          url = url.replace('watch?v=','v/')+'&autoplay=1' // play the youtube video fullscreen
           location.href=url;
         }
 
