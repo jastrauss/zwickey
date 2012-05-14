@@ -91,7 +91,7 @@ function keyHandler( e )
 
       // autcomplete shenanigans
       if (step == 3) {
-        moviename = $('#text').text().slice(2);
+        moviename = $('#text').text();
         populateAutocomplete(moviename);
       }
       
@@ -143,20 +143,26 @@ function showStep() {
         passwordmode = false;
     } else if (step == 2) {
     	name = $('#text').text();
-    	name = name.slice(8);
     	prompt.innerHTML = "[Step 2/3] (User: " + name + ") Enter your password:";
     	ac.style.visibility = "hidden";
         passwordmode = true;
-        $('#text').text('>>');
+        $('#text').html('');
     } else if (step == 3) {
         prompt.innerHTML = "[Step 3/3] Enter a movie:";
         ac.style.visibility = "visible";
         passwordmode = false;
-        $('#text').text('>>');
+        $('#text').html('');
     } else {
-        moviename = $('#text').text().slice(2);
-        alert(moviename);
-        // get the video url and redirect there!
+        if ( counter < 3 ) { // the user isn't in the autocomplete
+          moviename = $('#text').text();
+          location.href = 'http://www.youtube.com/results?search_query=hi'+moviename
+        } else { // get the result from autocomplete
+          var movie_num = counter-3;
+          console.log(movie_num);
+          var url = vids[movie_num][1];
+          url = url.replace('watch?v=','v/') // play the youtube video fullscreen
+          location.href=url;
+        }
 
     }
 }

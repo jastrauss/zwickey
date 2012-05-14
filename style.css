@@ -5,7 +5,7 @@ body {
 
 div.container {
 	text-align: center;
-	margin-top: 100px;
+	/* margin-top: 100px; */
 }
 
 div.outer {
@@ -93,12 +93,11 @@ div.arrow2 {
 	display: inline-block;
 }
 
-
 #autocomplete {
   width: 650px;
   height: 350px;
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -118,5 +117,20 @@ div.arrow2 {
 .box_black { border: solid 2px black; }
 
 .prompt {
-    margin: auto;
+  margin: auto;
+}
+
+.inp {
+  width: 400px;
+  border: 2px solid red;
+  margin: 0px auto;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.inp > .redtext {
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
 }
