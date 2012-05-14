@@ -141,6 +141,10 @@ function showStep() {
         prompt.innerHTML = "[Step 1/3] Enter your username:";
         ac.style.visibility = "hidden";
         passwordmode = false;
+    }
+    else if (step == 2 && $('#text').text()=="") {
+    	step--;
+    	alert("Username must have at least one character!");
     } else if (step == 2) {
     	name = $('#text').text();
     	prompt.innerHTML = "[Step 2/3] (User: " + name + ") Enter your password:";
