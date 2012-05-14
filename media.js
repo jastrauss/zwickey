@@ -23,7 +23,6 @@ var parseXML = function(data) {
 }
 
 var queryYoutube = function(word) {
-  alert(word);
   $.get("https://gdata.youtube.com/feeds/api/videos", {'q':word, 'max-results':"5"}, 
     function(data) { parseXML(data); }
   );
