@@ -6,125 +6,270 @@
 	</head>
 <body>
 	<script src="jquery.js"></script>
-	<script src="keys.js"></script>
+	<script src="keys2.js"></script>
+	<script src="media.js"></script>
+  <script src="autocomplete.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	
-	<div id='text'>
-	>>>&nbsp;
+
+	<div class="prompt" id="prompt">
 	</div>
 	
+	<div class="inp">
+    <span class="redtext">&gt &gt &nbsp;</span>
+    <span id="text"></span>
+	</div>
+
+  <br />	
+  <br />	
+  <br />	
+  <br />	
+
 	<div class='container'>
 
 	<div class='arrow'><img src='gfx/larr.png'/></div>
-	<div class='arrow'><img src='gfx/uarr.png'/></div>
 	<div class='arrow'><img src='gfx/rarr.png'/></div>
 	
-	<div class='outer rounded level'>
+	<div class='arrrow2'><img src='gfx/uarr.png'/></div>
+	<div id='0' class='outer rounded level'>
 		<div>
 			<div>
-				<div class='letter'>A</div>
-				<div class='letter'>B</div>
-				<div class='letter'>C</div>
+				<div>
+					<div>
+						<div class='letter'>A</div>
+						<div class='letter'>B</div>
+					</div>
+					<div>
+						<div class='letter'>C</div>
+						<div class='letter'>D</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div class='letter'>E</div>
+						<div class='letter'>F</div>
+					</div>
+					<div>
+						<div class='letter'>G</div>
+						<div class='letter'>H</div>
+					</div>
+				</div>
 			</div>
 			<div>
-				<div class='letter'>D</div>
-				<div class='letter'>E</div>
-				<div class='letter'>F</div>
-			</div>
-			<div>
-				<div class='letter'>G</div>
-				<div class='letter'>H</div>
-				<div class='letter'>I</div>
+				<div>
+					<div>
+						<div class='letter'>I</div>
+						<div class='letter'>J</div>
+					</div>
+					<div>
+						<div class='letter'>K</div>
+						<div class='letter'>L</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>M</div>
+					<div class='letter'>N</div>
+				</div>
 			</div>
 		</div>
 		<div>
 			<div>
-				<div class='letter'>J</div>
-				<div class='letter'>K</div>
-				<div class='letter'>L</div>
+				<div>
+					<div>
+						<div class='letter'>O</div>
+						<div class='letter'>P</div>
+					</div>
+					<div>
+						<div class='letter'>Q</div>
+						<div class='letter'>R</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>S</div>
+					<div class='letter'>T</div>
+				</div>
 			</div>
 			<div>
-				<div class='letter'>M</div>
-				<div class='letter'>N</div>
-				<div class='letter'>O</div>
-			</div>
-			<div>
-				<div class='letter'>P</div>
-				<div class='letter'>Q</div>
-				<div class='letter'>R</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div class='letter'>S</div>
-				<div class='letter'>T</div>
-				<div class='letter'>U</div>
-			</div>
-			<div>
-				<div class='letter'>V</div>
-				<div class='letter'>W</div>
-				<div class='letter'>X</div>
-			</div>
-			<div>
-				<div class='letter'>Y</div>
-				<div class='letter'>Z</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class='outer rounded'>
-		<div>
-			<div>
-				<div class='letter'>1</div>
-				<div class='letter'>2</div>
-				<div class='letter'>3</div>
-			</div>
-			<div>
-				<div class='letter'>4</div>
-				<div class='letter'>5</div>
-				<div class='letter'>6</div>
-			</div>
-			<div>
-				<div class='letter'>7</div>
-				<div class='letter'>8</div>
-				<div class='letter'>9</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div class='letter'>0</div>
-				<div class='letter'>!</div>
-				<div class='letter'>@</div>
-			</div>
-			<div>
-				<div class='letter'>#</div>
-				<div class='letter'>$</div>
-				<div class='letter'>%</div>
-			</div>
-			<div>
-				<div class='letter'>^</div>
-				<div class='letter'>(</div>
-				<div class='letter'>)</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div class='letter'>-</div>
-				<div class='letter'>+</div>
-				<div class='letter'>*</div>
-			</div>
-			<div>
-				<div class='letter'>/</div>
-				<div class='letter'>_</div>
-				<div class='letter'>&lt;-</div>
-			</div>
-			<div>
-				<div class='letter'>'</div>
-				<div class='letter'>"</div>
+				<div>
+					<div>
+						<div class='letter'>U</div>
+						<div class='letter'>V</div>
+					</div>
+					<div>
+						<div class='letter'>W</div>
+						<div class='letter'>X</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>Y</div>
+					<div class='letter'>Z</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<br/>
+	<br/>
+
+	<div id='1' class='outer rounded'>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>a</div>
+						<div class='letter'>b</div>
+					</div>
+					<div>
+						<div class='letter'>c</div>
+						<div class='letter'>d</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div class='letter'>e</div>
+						<div class='letter'>f</div>
+					</div>
+					<div>
+						<div class='letter'>g</div>
+						<div class='letter'>h</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>i</div>
+						<div class='letter'>j</div>
+					</div>
+					<div>
+						<div class='letter'>k</div>
+						<div class='letter'>l</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>m</div>
+					<div class='letter'>n</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>o</div>
+						<div class='letter'>p</div>
+					</div>
+					<div>
+						<div class='letter'>q</div>
+						<div class='letter'>r</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>s</div>
+					<div class='letter'>t</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>u</div>
+						<div class='letter'>v</div>
+					</div>
+					<div>
+						<div class='letter'>w</div>
+						<div class='letter'>x</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>y</div>
+					<div class='letter'>z</div>
+				</div>
+			</div>
+		</div>
+	</div>	
 	
+  <br />
+  <br />
+		
+	<div class='arrrow2'><img src='gfx/darr.png'/></div>
+	<div id='2' class='outer rounded'>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>0</div>
+						<div class='letter'>1</div>
+					</div>
+					<div>
+						<div class='letter'>2</div>
+						<div class='letter'>3</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div class='letter'>4</div>
+						<div class='letter'>5</div>
+					</div>
+					<div>
+						<div class='letter'>6</div>
+						<div class='letter'>7</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>8</div>
+						<div class='letter'>9</div>
+					</div>
+					<div>
+						<div class='letter'>!</div>
+						<div class='letter'>?</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>@</div>
+					<div class='letter'>#</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>$</div>
+						<div class='letter'>%</div>
+					</div>
+					<div>
+						<div class='letter'>(</div>
+						<div class='letter'>)</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter'>&lt;</div>
+					<div class='letter'>&gt;</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<div class='letter'>-</div>
+						<div class='letter'>+</div>
+					</div>
+					<div>
+						<div class='letter'>*</div>
+						<div class='letter'>/</div>
+					</div>
+				</div>
+				<div>
+					<div class='letter ital'>space</div>
+					<div class='letter ital'>del</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div id="autocomplete" class="box_black"> </div>
+
 	</div>
 </body>
 </html>
