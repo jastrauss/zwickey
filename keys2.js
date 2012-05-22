@@ -3,7 +3,7 @@ $(document).keydown( keyHandler );
 
 var colors = ["red","green"];
 var counter = 0;
-var step = 0;
+var step = 2;
 var password_mode = false;
 var name = "";
 var moviename = "";
